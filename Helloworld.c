@@ -13,7 +13,7 @@ UefiMain(EFI_HANDLE IN ImageHandle,EFI_SYSTEM_TABLE IN *Systemtable){
     Print(L"Error while get Handle buffer");
   }
   Print(L"ret %d\n",ret);
-  Print(L"NoHandles %d\n",NoHandles);
+  Print(L"HandlesNumbers %d\n",NoHandles);
   EFI_GRAPHICS_OUTPUT_PROTOCOL *Gop;
   ret=gBS->OpenProtocol(buffer[0],&gEfiGraphicsOutputProtocolGuid,(void **)&Gop,ImageHandle,NULL,EFI_OPEN_PROTOCOL_GET_PROTOCOL);
   Print(L"ret %d\n",ret);
